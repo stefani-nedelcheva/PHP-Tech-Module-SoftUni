@@ -1,11 +1,6 @@
 <?php
 
-$num = readline();
+$dateAsString = readline();
+$date = new DateTime($dateAsString);
 
-$days = ["Invalid Day!", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
-
-if ($num >= 1 && $num <= 7) {
-    echo $days[$num];
-} else {
-    echo $days[0];
-}
+echo $date->format("l") . PHP_EOL;
